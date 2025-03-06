@@ -3,100 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>XiaoshuaiChen-Sharky Home Page</title>
+  <title>Xiaoshuai Chen - About Me</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .publication-video {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: left;
-      margin-top: 15px; 
-      margin-left: 15px; 
-      margin-right: 15px;
+    .collapsible-content {
+      display: none; /* 默认隐藏 */
     }
-    li {
-      margin-bottom: 40px;
+    .collapsible-content.show {
+      display: block; /* 点击后显示 */
+    }
+    .more-button {
+      cursor: pointer;
+      color: #007BFF;
+      text-decoration: underline;
+      margin-left: 5px; /* 与前文保持一点间距 */
+    }
+    nav {
+      margin: 20px 0;
+    }
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #007BFF;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>Xiaoshuai Chen's Homepage</h1>
+  <h1>Xiaoshuai Chen</h1>
+  <nav>
+    <a href="index.html">About Me</a>
+    <a href="publications.html">Publications</a>
+    <a href="travel.html">Travel</a>
+    <a href="cat.html">Cat</a>
+    <a href="cooking.html">Cooking</a>
+  </nav>
   <h2>About Me</h2>
-  <p>I am Xiaoshuai Chen, a 3rd-year Ph.D. student in Robot Learning.</p>
   <p>
-    Check out my full list of publications on 
-    <a href="https://scholar.google.com/citations?user=lmr2zL4AAAAJ&hl=en" target="_blank">Google Scholar</a>.
+    I am Xiaoshuai Chen, a 3rd-year Ph.D. student in Robot Learning at Imperial College London, affiliated with the Robot Intelligence Lab and REDS Lab in the Dyson School of Design Engineering. My research focuses on scalable and generalizable robot learning systems, with interests in learning from expert demonstrations, remote teleoperation, cross-platform skill transfer, and multimodal intelligence integrating vision, tactile sensing, and language. Recently, I’ve been advancing precision robotics for surgical robot applications, enhancing accuracy and adaptability in medical contexts.<span id="toggleButton" class="more-button">More</span>
   </p>
-  <p>
-    Connect with my LinkedIn on 
-    <a href="https://www.linkedin.com/in/xiaoshuai-chen-6b7007183/" target="_blank">LinkedIn</a>.
-  </p>
-  
-  <h2>Publications</h2>
-  <ul>
-    <li>
-      [2025]. 
-      <a href="https://ieeexplore.ieee.org/abstract/document/10829642" target="_blank">
-        A Backbone for Long-Horizon Robot Task Understanding
-      </a>. 
-      <strong>Xiaoshuai Chen</strong>, Wei Chen, Dongmyoung Lee, Yukun Ge, Nicolas Rojas, Petar Kormushev.
-      [<a href="https://sites.google.com/view/therbligsbasedbackbone/home" target="_blank">Project Website</a>]
-      [<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lmr2zL4AAAAJ&citation_for_view=lmr2zL4AAAAJ:Tyk-4Ss8FVUC" target="_blank">Google Scholar</a>]
-      [<a href="https://arxiv.org/pdf/2408.01334" target="_blank">Arxiv</a>]
-      <div class="publication-video">
-        <iframe width="300" height="200" src="https://www.youtube.com/embed/J6StImuuLvQ?rel=0&modestbranding=1&showinfo=0&iv_load_policy=3" frameborder="0" allowfullscreen></iframe>
-        <iframe width="300" height="200" src="https://www.youtube.com/embed/EpJa2uuwk3E" frameborder="0" allowfullscreen></iframe>
-        <iframe width="300" height="200" src="https://www.youtube.com/embed/SHZO8vj4leo" frameborder="0" allowfullscreen></iframe>
-        <iframe width="300" height="200" src="https://www.youtube.com/embed/gCFJKNVJ0RE" frameborder="0" allowfullscreen></iframe>
-        <iframe width="300" height="200" src="https://www.youtube.com/embed/7H6TmF4dPPk" frameborder="0" allowfullscreen></iframe>
-	<iframe width="300" height="200" src="https://www.youtube.com/embed/2MBkGWtt57s" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </li>
-    
-    <li>
-      [2024]. 
-      <a href="https://ieeexplore.ieee.org/abstract/document/10697264" target="_blank">
-        An Origami-Inspired Endoscopic Capsule with Tactile Perception for Early Tissue Anomaly Detection
-      </a>. 
-      Yukun Ge, Rui Zong, <strong>Xiaoshuai Chen</strong>, Thrishantha Nanayakkara.
-      [<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lmr2zL4AAAAJ&citation_for_view=lmr2zL4AAAAJ:Y0pCki6q_DkC" target="_blank">Google Scholar</a>]
-      [<a href="https://arxiv.org/pdf/2406.01371" target="_blank">Arxiv</a>]
-      <div class="publication-video">
-        <iframe width="400" height="225" src="https://www.youtube.com/embed/EPhV9htQ4sY" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </li>
-    
-    <li>
-      [2024]. 
-      <a href="https://ieeexplore.ieee.org/abstract/document/10410659" target="_blank">
-        G.O.G: A Versatile Gripper-On-Gripper Design for Bimanual Cloth Manipulation with a Single Robotic Arm
-      </a>
-      Dongmyoung Lee, Wei Chen, <strong>Xiaoshuai Chen</strong>, Nicolas Rojas.
-      [<a href="https://sites.google.com/view/gripperongripper" target="_blank">Project Website</a>]
-      [<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lmr2zL4AAAAJ&citation_for_view=lmr2zL4AAAAJ:2osOgNQ5qMEC" target="_blank">Google Scholar</a>]
-      <div class="publication-video">
-       <iframe width="400" height="225" src="https://www.youtube.com/embed/YOI2AswGpAU" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </li>
-    
-    <li>
-      [2020]. 
-      <a href="https://ieeexplore.ieee.org/abstract/document/9278625" target="_blank">
-        Subject-independent slow fall detection with wearable sensors via deep learning
-      </a>. 
-      <strong>Xiaoshuai Chen</strong>, Shuo Jiang, Benny Lo.
-      [<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lmr2zL4AAAAJ&citation_for_view=lmr2zL4AAAAJ:9yKSN-GCB0IC" target="_blank">Google Scholar</a>]
-    </li>
-    
-    <li>
-      [2020]. 
-      <a href="https://ieeexplore.ieee.org/abstract/document/9277874" target="_blank">
-        A pervasive respiratory monitoring sensor for COVID-19 pandemic
-      </a>. 
-      <strong>Xiaoshuai Chen</strong>, Shuo Jiang, Zeyu Li, Benny Lo.
-      [<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lmr2zL4AAAAJ&citation_for_view=lmr2zL4AAAAJ:d1gkVwhDpl0C" target="_blank">Google Scholar</a>]
-    </li>
-  </ul>
+  <div id="moreContent" class="collapsible-content">
+    <p>
+      I hold an MRes in Medical Robotics and Image-Guided Intervention (Distinction) from Imperial College London (2019–2020) and dual BEng degrees in Mechatronic Engineering from Chongqing University (2015–2019) and Mechanical Engineering from Queen’s University Belfast (2017–2019). My expertise spans robotics, deep learning, and mechanical design, supported by skills in Python, PyTorch, ROS2, and hardware like UR5 and Kinova robots.
+    </p>
+    <p>
+      My work has led to five first- or co-authored publications in IEEE RAL and OJEMB, including "A Backbone for Long-Horizon Robot Task Understanding" (2025) and an ICRA 2023 award-winning project in robotic manipulation. Check out my full list of publications on 
+      <a href="https://scholar.google.com/citations?user=lmr2zL4AAAAJ&hl=en" target="_blank">Google Scholar</a>.
+    </p>
+    <p>
+      Beyond research, I have industry experience as an AI Project Manager at Hithink RoyalFlush (2021) and a research internship at Tsinghua University (2018), where I won the Siemens JCAR Intelligent Robot Grasping Competition (1st place, 2018). I am passionate about advancing robotics through interdisciplinary collaboration—connect with me on 
+      <a href="https://www.linkedin.com/in/xiaoshuai-chen-6b7007183/" target="_blank">LinkedIn</a> to discuss my work or explore opportunities in robot learning and AI.
+    </p>
+  </div>
+
+  <script>
+    // JavaScript 控制折叠和展开
+    const toggleButton = document.getElementById('toggleButton');
+    const moreContent = document.getElementById('moreContent');
+
+    toggleButton.addEventListener('click', function() {
+      if (moreContent.classList.contains('show')) {
+        moreContent.classList.remove('show');
+        toggleButton.textContent = 'More';
+      } else {
+        moreContent.classList.add('show');
+        toggleButton.textContent = 'Less';
+      }
+    });
+  </script>
 </body>
 </html>
