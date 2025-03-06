@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xiaoshuai Chen - Cooking</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 导航栏样式 */
+    nav {
+      margin: 20px 0;
+    }
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #007BFF;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    /* 美食照片集合样式 */
+    .cooking-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+      max-width: 960px; /* 限制宽度以容纳3张图，每张300px + 间距20px */
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 40px;
+    }
+    .cooking-item {
+      text-align: center;
+      flex: 0 0 calc(33.33% - 20px); /* 每张图占1/3宽度，减去间距 */
+      box-sizing: border-box; /* 包含边框和内边距 */
+    }
+    .cooking-item img {
+      width: 300px;
+      height: 250px;
+      object-fit: cover; /* 保持图片比例并裁剪 */
+      border-radius: 10px; /* 圆角效果 */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    }
+    .cooking-item p {
+      margin: 2px 0 0;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Xiaoshuai Chen</h1>
+  <nav>
+    <a href="index.html">About Me</a>
+    <a href="publications.html">Publications</a>
+    <a href="travel.html">Travel</a>
+    <a href="cat.html">Cat</a>
+    <a href="cooking.html">Cooking</a>
+  </nav>
+  <h2>Cooking</h2>
+  <p>Here’s a collection of some delicious dishes I’ve made! Cooking is one of my passions, and I love experimenting with flavors and techniques!</p>
+  
+  <div class="cooking-gallery">
+    <div class="cooking-item">
+      <img src="images/1.jpeg" alt="Dinner with prawn noodles">
+      <p>Salmon with mild fired</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/2.jpeg" alt="Fried beef with middle well part 1">
+      <p>Grilled beef with middle well part 1</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/3.jpeg" alt="Fried beef with middle well part 2">
+      <p>Grilled beef with middle well part 2</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/4.jpeg" alt="Middle well salmon">
+      <p>Natural way for slightly cooking</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/5.jpeg" alt="Soft natural tofu!!">
+      <p>Garlic Arctic surf clam!!</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/6.jpeg" alt="Dinner with prawn noodles">
+      <p>Crispy outside, tender inside prawn</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/7.jpeg" alt="Fried beef with middle well part 1">
+      <p>Crispy outside, tender inside prawn 2</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/8.jpeg" alt="Fried beef with middle well part 2">
+      <p>Cook for friend's birthday</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/9.jpeg" alt="Middle well salmon">
+      <p>Spotlight Rotation shrimps (Garlic)</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/10.jpeg" alt="Soft natural tofu!!">
+      <p>Grilled Chicken 1</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/11.jpeg" alt="Middle well salmon">
+      <p>Grilled Chicken 2</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/12.jpeg" alt="Soft natural tofu!!">
+      <p>Grilled Chicken 3</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/13.jpeg" alt="Soft natural tofu!!">
+      <p>Prawned dumplings</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/14.jpeg" alt="Soft natural tofu!!">
+      <p>Sea kissed Lobster!!</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/15.jpeg" alt="Soft natural tofu!!">
+      <p>Dinner with prawn noodle</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/16.jpeg" alt="Soft natural tofu!!">
+      <p>Soft natural tofu!!</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/17.jpeg" alt="Soft natural tofu!!">
+      <p>Chicken and seasoned pork</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/18.jpeg" alt="Soft natural tofu!!">
+      <p>Grilled Lamb!!</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/19.jpeg" alt="Soft natural tofu!!">
+      <p>First try Tuscan Salmon</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/20.jpeg" alt="Soft natural tofu!!">
+      <p>Tender-king chicken (super soft)</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/21.jpeg" alt="Soft natural tofu!!">
+      <p>Beautiful dinner with Naicha (hidden)!!</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/22.jpeg" alt="Soft natural tofu!!">
+      <p>Chestnut hunting</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/23.jpeg" alt="Soft natural tofu!!">
+      <p>Chestnut sugering and cooking</p>
+    </div>
+    <div class="cooking-item">
+      <img src="images/24.jpeg" alt="Soft natural tofu!!">
+      <p>Pumpkin Lava Rock Cake</p>
+    </div>
+  </div>
+</body>
+</html>
