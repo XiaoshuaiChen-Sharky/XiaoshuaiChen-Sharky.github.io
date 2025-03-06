@@ -10,24 +10,28 @@
     body {
       font-family: Arial, sans-serif;
       margin: 40px auto 20px auto; /* 顶部留出40px margin，其他方向20px */
-      max-width: 1200px;
+      max-width: 1000px;
       padding: 0 20px;
       color: #333; /* 文字颜色 */
       position: relative; /* 为贴纸定位提供参考 */
+      background-color: #f5f5dc; /* 米黄色背景 */
     }
     /* 贴纸样式（右上角背景照片） */
     .sticker {
       position: absolute;
-      top: 0; /* 与标题顶部齐平 */
+      top: -20px; /* 向上移动，使部分在白色区域外 */
       right: 20px; /* 与页面右边距保持一致 */
-      width: 200px; /* 贴纸宽度，可调整 */
-      height: 200px; /* 贴纸高度，可调整 */
+      width: 200px; /* 贴纸宽度 */
+      height: 200px; /* 贴纸高度 */
       background-image: url('images/profile.jpeg');
       background-size: cover;
       background-position: center;
       border-radius: 50%; /* 圆形贴纸效果 */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      z-index: 1; /* 确保贴纸在内容之上 */
+      z-index: 3; /* 在文字上方，高于内容容器 */
+      /* 底部40%透明 */
+      -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
     }
     /* 内容容器 */
     .content-wrapper {
@@ -37,6 +41,7 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       position: relative; /* 确保内容在贴纸下方 */
       overflow: hidden; /* 防止内容溢出 */
+      z-index: 2; /* 在贴纸下方 */
     }
     /* 标题与贴纸对齐 */
     h1 {
@@ -72,9 +77,9 @@
     section {
       margin-bottom: 30px;
     }
-    /* 文字绕开贴纸 */
+    /* 文字不再绕开贴纸 */
     section p {
-      margin-right: 220px; /* 留出贴纸宽度+间距 */
+      /* margin-right: 220px; 移除此行，文字正常布局 */
     }
   </style>
 </head>
