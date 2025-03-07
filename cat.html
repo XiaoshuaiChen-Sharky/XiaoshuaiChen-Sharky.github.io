@@ -95,6 +95,14 @@
       margin-left: 10px;
       margin-right: 10px;
     }
+    .cat-video-item {
+      text-align: center; /* 文字居中 */
+    }
+    .cat-video-item p {
+      margin: 0 0 5px 0; /* 文字与视频间距 */
+      font-size: 14px; /* 字体大小 */
+      color: #fff; /* 文字颜色为白色 */
+    }
     li {
       margin-bottom: 40px;
     }
@@ -123,15 +131,24 @@
       <a href="cat.html">Cat</a>
       <a href="cooking.html">Cooking</a>
     </nav>
-    <h2>Cat</h2>
+    <h2>Catkin: Naicha</h2>
     <p>My adorable cat, Naicha, brings so much joy to my life! Here are some moments of Naicha I've captured.</p>
     <ul>
       <li>
-        [2023 Nov 26]. When Naicha just arrived home (2 months old XD), and 4 months old and then 1.5 years old.
+        [2023 Nov 26]. I adopted Naicha from East London's local family.
         <div class="cat-video">
-          <iframe width="600" height="400" src="https://www.youtube.com/embed/jHXfGBMX7kM" frameborder="0" allowfullscreen></iframe>
-          <iframe width="300" height="350" src="https://www.youtube.com/embed/SoNU3ETNbcw" frameborder="0" allowfullscreen></iframe>
-          <iframe width="300" height="350" src="https://www.youtube.com/embed/qOrdDkXBPb8" frameborder="0" allowfullscreen></iframe>
+          <div class="cat-video-item">
+            <p>Naicha 2 months</p>
+            <iframe width="610" height="350" src="https://www.youtube.com/embed/jHXfGBMX7kM" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="cat-video-item">
+            <p>Naicha 4 months</p>
+            <iframe width="300" height="350" src="https://www.youtube.com/embed/SoNU3ETNbcw" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="cat-video-item">
+            <p>Naicha 1.5 years old</p>
+            <iframe width="300" height="350" src="https://www.youtube.com/embed/qOrdDkXBPb8" frameborder="0" allowfullscreen></iframe>
+          </div>
         </div>
       </li>
     </ul>
