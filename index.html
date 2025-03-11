@@ -9,130 +9,216 @@
     /* 整体布局 */
     body {
       font-family: Arial, sans-serif;
-      margin: 40px auto 20px auto; /* 顶部留出40px margin，其他方向20px */
+      margin: 40px auto 20px auto;
       max-width: 1100px;
       padding: 0 20px;
-      color: #fff; /* 文字颜色为白色 */
-      position: relative; /* 为贴纸和照片定位提供参考 */
-      background-color: #1A2525; /* 更大背景为深灰蓝色 */
+      color: #fff;
+      position: relative;
+      background-color: #1A2525;
     }
+    
     /* 贴纸样式（左侧） */
     .sticker {
       position: absolute;
-      top: -20px; /* 顶部位置不变 */
-      left: 20px; /* 左侧，与左边距一致 */
-      width: 200px; /* 贴纸宽度 */
-      height: 200px; /* 贴纸高度 */
+      top: -20px;
+      left: 20px;
+      width: 200px;
+      height: 200px;
       background-image: url('images/profile.jpeg');
       background-size: cover;
       background-position: center;
-      border-radius: 50%; /* 圆形贴纸效果 */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* 更深阴影增强质感 */
-      z-index: 3; /* 在文字上方 */
-      /* 底部40%透明 */
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 3;
       -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
       mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
     }
+    
     /* 社交链接容器 */
     .social-links {
       position: absolute;
-      top: 200px; /* 从贴纸底部开始 */
-      left: 20px; /* 与贴纸对齐 */
-      width: 200px; /* 与贴纸宽度一致 */
-      text-align: center; /* 居中对齐 */
-      z-index: 3; /* 在文字上方，与贴纸同级 */
+      top: 200px;
+      left: 20px;
+      width: 200px;
+      text-align: center;
+      z-index: 3;
     }
+    
     .social-links a, .social-links span {
-      display: block; /* 垂直排列 */
-      margin: 15px 0; /* 链接间距 */
-      color: #87CEEB; /* 浅天蓝色，辨识度高且协调 */
+      display: block;
+      margin: 15px 0;
+      color: #87CEEB;
       text-decoration: none;
-      font-size: 16px; /* 字体大小 */
-      transition: color 0.3s ease; /* 平滑颜色过渡 */
-      cursor: pointer; /* 鼠标悬停时显示手型 */
+      font-size: 16px;
+      transition: color 0.3s ease;
+      cursor: pointer;
     }
+    
     .social-links a:hover, .social-links span:hover {
-      color: #B0E0E6; /* 悬停时稍亮 */
+      color: #B0E0E6;
       text-decoration: underline;
     }
+    
     /* 右侧中间照片 */
     .main-photo {
-      float: right; /* 使用浮动让文字自然绕过 */
-      margin: 100px 20px 20px 20px; /* 调整顶部间距 */
-      width: 250px; /* 照片宽度 */
-      height: 300px; /* 照片高度 */
+      float: right;
+      margin: 100px 20px 20px 20px;
+      width: 250px;
+      height: 300px;
       background-image: url('images/main.jpeg');
       background-size: cover;
       background-position: center;
-      border-radius: 10px; /* 圆角矩形 */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* 更深阴影增强质感 */
-      z-index: 3; /* 在文字上方，与贴纸同级 */
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 3;
     }
+    
     /* 内容容器 */
     .content-wrapper {
-      background-color: rgba(0, 0, 0, 0.9); /* 文字和图片背景为黑色 */
+      background-color: rgba(0, 0, 0, 0.9);
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* 更深阴影增强质感 */
-      position: relative; /* 确保内容在贴纸和照片下方 */
-      overflow: hidden; /* 防止内容溢出 */
-      z-index: 2; /* 在贴纸和照片下方 */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
       padding-left: 240px; /* 留出左侧贴纸和链接空间 */
     }
+    
     /* 标题与贴纸对齐 */
     h1 {
       margin-top: 0;
       line-height: 1.2;
-      color: #fff; /* 标题颜色为白色 */
+      color: #fff;
     }
+    
     /* 导航栏样式 */
     nav {
       margin: 20px 0;
     }
+    
     nav a {
       margin-right: 20px;
       text-decoration: none;
-      color: #87CEEB; /* 导航链接改为浅天蓝色 */
+      color: #87CEEB;
     }
+    
     nav a:hover {
       text-decoration: underline;
     }
+    
     /* 折叠部分的样式 */
     .collapsible-content {
-      display: none; /* 默认隐藏 */
+      display: none;
     }
+    
     .collapsible-content.show {
-      display: block; /* 点击后显示 */
+      display: block;
     }
+    
     .more-button {
       cursor: pointer;
-      color: #87CEEB; /* More 按钮改为浅天蓝色 */
+      color: #87CEEB;
       text-decoration: underline;
-      margin-left: 5px; /* 与前文保持一点间距 */
+      margin-left: 5px;
     }
+    
     /* 部分分隔样式 */
     section {
       margin-bottom: 30px;
     }
+    
     /* 项目符号样式 */
     ul {
-      list-style-type: disc; /* 默认圆点 */
-      padding-left: 20px; /* 缩进 */
-      margin: 0; /* 移除默认外边距 */
+      list-style-type: disc;
+      padding-left: 20px;
+      margin: 0;
     }
+    
     li {
-      margin-bottom: 8px; /* 条目间距 */
+      margin-bottom: 8px;
     }
+    
     /* 公司和大学名称加粗并加下划线 */
     .highlight {
-      font-weight: bold; /* 加粗 */
-      text-decoration: underline; /* 下划线 */
-      color: #fff; /* 确保加粗部分也是白色 */
+      font-weight: bold;
+      text-decoration: underline;
+      color: #fff;
+    }
+    
+    /* 添加响应式设计的媒体查询 */
+    @media (max-width: 1024px) {
+      .content-wrapper {
+        padding-left: 20px; /* 减小左侧padding */
+      }
+      
+      .sticker {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0 auto 20px auto; /* 居中显示 */
+      }
+      
+      .social-links {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      
+      .social-links a, .social-links span {
+        display: inline-block;
+        margin: 5px 10px;
+      }
+      
+      .main-photo {
+        float: none;
+        margin: 20px auto;
+        display: block;
+      }
+    }
+    
+    /* 手机屏幕的特殊处理 */
+    @media (max-width: 600px) {
+      body {
+        margin: 20px auto;
+      }
+      
+      .sticker {
+        width: 150px;
+        height: 150px;
+      }
+      
+      .main-photo {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        aspect-ratio: 5/6; /* 保持原比例 */
+      }
+      
+      nav {
+        text-align: center;
+      }
+      
+      nav a {
+        display: inline-block;
+        margin: 5px 10px;
+      }
+      
+      h1 {
+        font-size: 24px;
+        text-align: center;
+      }
+      
+      .content-wrapper {
+        padding: 15px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="sticker"></div> <!-- 贴纸元素，左侧 -->
+  <div class="sticker"></div>
   <div class="social-links">
     <a href="mailto:cx119@ic.ac.uk">Email</a>
     <a href="https://www.linkedin.com/in/xiaoshuai-chen-6b7007183/" target="_blank">LinkedIn</a>
@@ -141,7 +227,7 @@
     <a href="https://www.instagram.com/cxiaoshuai?igsh=MTJ6dW9peHdyMjM0cA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
   </div>
   <div class="content-wrapper">
-    <div class="main-photo"></div> <!-- 右侧中间照片 -->
+    <div class="main-photo"></div>
     <h1>Xiaoshuai Chen (陈晓帅)</h1>
     <nav>
       <a href="index.html">About Me</a>
@@ -169,7 +255,7 @@
       <h2>Education</h2>
       <ul>
         <li>MRes in Medical Robotics and Image-Guided Intervention (Distinction) from <span class="highlight">Imperial College London</span> (2019–2020).</li>
-        <li>Dual BEng degrees in Mechatronic Engineering from <span class="highlight">Chongqing University</span> (2015–2019) and Mechanical Engineering from <span class="highlight">Queen’s University Belfast</span> (2017–2019).</li>
+        <li>Dual BEng degrees in Mechatronic Engineering from <span class="highlight">Chongqing University</span> (2015–2019) and Mechanical Engineering from <span class="highlight">Queen's University Belfast</span> (2017–2019).</li>
         <li>Expertise spans robotics, cutting stage foundation model algorithsm and mechanical design, supported by skills in UR5, Franka Emika, Baxter, Kinova and Master-slave Robot System.</li>
       </ul>
     </section>
