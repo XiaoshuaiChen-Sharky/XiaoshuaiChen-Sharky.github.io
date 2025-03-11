@@ -6,98 +6,6 @@
   <title>Xiaoshuai Chen - About Me</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* 整体布局 */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px auto 20px auto; /* 顶部留出40px margin，其他方向20px */
-      max-width: 1100px;
-      padding: 0 20px;
-      color: #fff; /* 文字颜色为白色 */
-      position: relative; /* 为贴纸和照片定位提供参考 */
-      background-color: #1A2525; /* 更大背景为深灰蓝色 */
-    }
-    /* 贴纸样式（左侧） */
-    .sticker {
-      position: absolute;
-      top: -20px; /* 顶部位置不变 */
-      left: 20px; /* 左侧，与左边距一致 */
-      width: 200px; /* 贴纸宽度 */
-      height: 200px; /* 贴纸高度 */
-      background-image: url('images/profile.jpeg');
-      background-size: cover;
-      background-position: center;
-      border-radius: 50%; /* 圆形贴纸效果 */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* 更深阴影增强质感 */
-      z-index: 3; /* 在文字上方 */
-      /* 底部40%透明 */
-      -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
-      mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
-    }
-    /* 社交链接容器 */
-    .social-links {
-      position: absolute;
-      top: 200px; /* 从贴纸底部开始 */
-      left: 20px; /* 与贴纸对齐 */
-      width: 200px; /* 与贴纸宽度一致 */
-      text-align: center; /* 居中对齐 */
-      z-index: 3; /* 在文字上方，与贴纸同级 */
-    }
-    .social-links a, .social-links span {
-      display: block; /* 垂直排列 */
-      margin: 15px 0; /* 链接间距 */
-      color: #87CEEB; /* 浅天蓝色，辨识度高且协调 */
-      text-decoration: none;
-      font-size: 16px; /* 字体大小 */
-      transition: color 0.3s ease; /* 平滑颜色过渡 */
-      cursor: pointer; /* 鼠标悬停时显示手型 */
-    }
-    .social-links a:hover, .social-links span:hover {
-      color: #B0E0E6; /* 悬停时稍亮 */
-      text-decoration: underline;
-    }
-    /* 右侧中间照片 */
-    .main-photo {
-      float: right; /* 使用浮动让文字自然绕过 */
-      margin: 100px 20px 20px 20px; /* 调整顶部间距 */
-      width: 250px; /* 照片宽度 */
-      height: 300px; /* 照片高度 */
-      background-image: url('images/main.jpeg');
-      background-size: cover;
-      background-position: center;
-      border-radius: 10px; /* 圆角矩形 */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* 更深阴影增强质感 */
-      z-index: 3; /* 在文字上方，与贴纸同级 */
-    }
-    /* 内容容器 */
-    .content-wrapper {
-      background-color: rgba(0, 0, 0, 0.9); /* 文字和图片背景为黑色 */
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* 更深阴影增强质感 */
-      position: relative; /* 确保内容在贴纸和照片下方 */
-      overflow: hidden; /* 防止内容溢出 */
-      z-index: 2; /* 在贴纸和照片下方 */
-      padding-left: 240px; /* 留出左侧贴纸和链接空间 */
-    }
-    /* 标题与贴纸对齐 */
-    h1 {
-      margin-top: 0;
-      line-height: 1.2;
-      color: #fff; /* 标题颜色为白色 */
-    }
-    /* 导航栏样式 */
-    nav {
-      margin: 20px 0;
-    }
-    nav a {
-      margin-right: 20px;
-      text-decoration: none;
-      color: #87CEEB; /* 导航链接改为浅天蓝色 */
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    /* 折叠部分的样式 */
     .collapsible-content {
       display: none; /* 默认隐藏 */
     }
@@ -106,92 +14,45 @@
     }
     .more-button {
       cursor: pointer;
-      color: #87CEEB; /* More 按钮改为浅天蓝色 */
+      color: #007BFF;
       text-decoration: underline;
       margin-left: 5px; /* 与前文保持一点间距 */
     }
-    /* 部分分隔样式 */
-    section {
-      margin-bottom: 30px;
+    nav {
+      margin: 20px 0;
     }
-    /* 项目符号样式 */
-    ul {
-      list-style-type: disc; /* 默认圆点 */
-      padding-left: 20px; /* 缩进 */
-      margin: 0; /* 移除默认外边距 */
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #007BFF;
     }
-    li {
-      margin-bottom: 8px; /* 条目间距 */
-    }
-    /* 公司和大学名称加粗并加下划线 */
-    .highlight {
-      font-weight: bold; /* 加粗 */
-      text-decoration: underline; /* 下划线 */
-      color: #fff; /* 确保加粗部分也是白色 */
+    nav a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="sticker"></div> <!-- 贴纸元素，左侧 -->
-  <div class="social-links">
-    <a href="mailto:cx119@ic.ac.uk">Email</a>
-    <a href="https://www.linkedin.com/in/xiaoshuai-chen-6b7007183/" target="_blank">LinkedIn</a>
-    <a href="https://scholar.google.com/citations?user=lmr2zL4AAAAJ&hl=en" target="_blank">Google Scholar</a>
-    <span onclick="alert('My WeChat ID: cxs96cxs')">WeChat</span>
-    <a href="https://www.instagram.com/cxiaoshuai?igsh=MTJ6dW9peHdyMjM0cA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
-  </div>
-  <div class="content-wrapper">
-    <div class="main-photo"></div> <!-- 右侧中间照片 -->
-    <h1>Xiaoshuai Chen (陈晓帅)</h1>
-    <nav>
-      <a href="index.html">About Me</a>
-      <a href="publications.html">Publications</a>
-      <a href="cat.html">Cat</a>
-      <a href="cooking.html">Cooking</a>
-    </nav>
-
-    <section>
-      <h2>About Me</h2>
-      <ul>
-        <li>3rd-year Ph.D. student in Robot Learning at <span class="highlight">Imperial College London</span>, affiliated with the Robot Intelligence Lab and REDS Lab in the Dyson School of Design Engineering.</li>
-        <li>Research focuses on scalable and generalizable robot learning systems.</li>
-        <li>Interests include learning from expert demonstrations, remote teleoperation, cross-platform skill transfer, and multimodal intelligence integrating vision, tactile sensing, and language.</li>
-        <li>Passionate about advancing robotics through interdisciplinary collaboration—connect with me on <a href="https://www.linkedin.com/in/xiaoshuai-chen-6b7007183/" target="_blank">LinkedIn</a> to discuss my work or explore opportunities in robot learning and AI. <span id="toggleButton" class="more-button">More</span></li>
-      </ul>
-      <div id="moreContent" class="collapsible-content">
-        <ul>
-          <li>I am also a funny guy!!!</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li>MRes in Medical Robotics and Image-Guided Intervention (Distinction) from <span class="highlight">Imperial College London</span> (2019–2020).</li>
-        <li>Dual BEng degrees in Mechatronic Engineering from <span class="highlight">Chongqing University</span> (2015–2019) and Mechanical Engineering from <span class="highlight">Queen’s University Belfast</span> (2017–2019).</li>
-        <li>Expertise spans robotics, cutting stage foundation model algorithsm and mechanical design, supported by skills in UR5, Franka Emika, Baxter, Kinova and Master-slave Robot System.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Working Experience</h2>
-      <ul>
-        <li>Currently doing internship in <span class="highlight">Precision Robotics</span> for surgical robot applications (2025).</li>
-        <li>AI Project Manager at <span class="highlight">Hithink RoyalFlush</span> (2021).</li>
-        <li>Research internship at <span class="highlight">Hamlyn Centre</span> (2020).</li>
-        <li>Research internship at <span class="highlight">Tsinghua University</span> (2018), where I won the <span class="highlight">Siemens</span> JCAR Intelligent Robot Grasping Competition (1st place, 2018).</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Research & Achievements</h2>
-      <ul>
-        <li>Five first- or co-authored publications in IEEE RAL and OJEMB, including "A Backbone for Long-Horizon Robot Task Understanding" (2025).</li>
-        <li>ICRA 2023 award-winning project in robotic manipulation.</li>
-        <li>Check out my full list of publications on <a href="https://scholar.google.com/citations?user=lmr2zL4AAAAJ&hl=en" target="_blank">Google Scholar</a>.</li>
-      </ul>
-    </section>
+  <h1>Xiaoshuai Chen</h1>
+  <nav>
+    <a href="index.html">About Me</a>
+    <a href="publications.html">Publications</a>
+  </nav>
+  <h2>About Me</h2>
+  <p>
+    I am Xiaoshuai Chen, a 3rd-year Ph.D. student in Robot Learning at Imperial College London, affiliated with the Robot Intelligence Lab and REDS Lab in the Dyson School of Design Engineering. My research focuses on scalable and generalizable robot learning systems, with interests in learning from expert demonstrations, remote teleoperation, cross-platform skill transfer, and multimodal intelligence integrating vision, tactile sensing, and language. Recently, I’ve been advancing precision robotics for surgical robot applications, enhancing accuracy and adaptability in medical contexts.<span id="toggleButton" class="more-button">More</span>
+  </p>
+  <div id="moreContent" class="collapsible-content">
+    <p>
+      I hold an MRes in Medical Robotics and Image-Guided Intervention (Distinction) from Imperial College London (2019–2020) and dual BEng degrees in Mechatronic Engineering from Chongqing University (2015–2019) and Mechanical Engineering from Queen’s University Belfast (2017–2019). My expertise spans robotics, deep learning, and mechanical design, supported by skills in Python, PyTorch, ROS2, and hardware like UR5 and Kinova robots.
+    </p>
+    <p>
+      My work has led to five first- or co-authored publications in IEEE RAL and OJEMB, including "A Backbone for Long-Horizon Robot Task Understanding" (2025) and an ICRA 2023 award-winning project in robotic manipulation. Check out my full list of publications on 
+      <a href="https://scholar.google.com/citations?user=lmr2zL4AAAAJ&hl=en" target="_blank">Google Scholar</a>.
+    </p>
+    <p>
+      Beyond research, I have industry experience as an AI Project Manager at Hithink RoyalFlush (2021) and a research internship at Tsinghua University (2018), where I won the Siemens JCAR Intelligent Robot Grasping Competition (1st place, 2018). I am passionate about advancing robotics through interdisciplinary collaboration—connect with me on 
+      <a href="https://www.linkedin.com/in/xiaoshuai-chen-6b7007183/" target="_blank">LinkedIn</a> to discuss my work or explore opportunities in robot learning and AI.
+    </p>
   </div>
 
   <script>
