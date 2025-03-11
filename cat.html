@@ -9,82 +9,91 @@
     /* 整体布局 */
     body {
       font-family: Arial, sans-serif;
-      margin: 40px auto 20px auto; /* 顶部留出40px margin，其他方向20px */
+      margin: 40px auto 20px auto;
       max-width: 1100px;
       padding: 0 20px;
-      color: #fff; /* 文字颜色为白色，与 index.html 一致 */
-      position: relative; /* 为贴纸和社交链接定位提供参考 */
-      background-color: #1A2525; /* 深灰蓝色背景，与 index.html 一致 */
+      color: #fff;
+      position: relative;
+      background-color: #1A2525;
     }
-    /* 贴纸样式（左侧，与 index.html 一致） */
+    
+    /* 贴纸样式（左侧） */
     .sticker {
       position: absolute;
-      top: -20px; /* 顶部位置不变 */
-      left: 20px; /* 移到左侧，与 index.html 一致 */
-      width: 200px; /* 贴纸宽度 */
-      height: 200px; /* 贴纸高度 */
+      top: -20px;
+      left: 20px;
+      width: 200px;
+      height: 200px;
       background-image: url('images/profile.jpeg');
       background-size: cover;
       background-position: center;
-      border-radius: 50%; /* 圆形贴纸效果 */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* 阴影与 index.html 一致 */
-      z-index: 3; /* 在文字上方 */
-      /* 底部40%透明，与 index.html 一致 */
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 3;
       -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
       mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
     }
-    /* 社交链接容器，与 index.html 一致 */
+    
+    /* 社交链接容器 */
     .social-links {
       position: absolute;
-      top: 200px; /* 从贴纸底部开始 */
-      left: 20px; /* 与贴纸对齐 */
-      width: 200px; /* 与贴纸宽度一致 */
-      text-align: center; /* 居中对齐 */
-      z-index: 3; /* 在文字上方，与贴纸同级 */
+      top: 200px;
+      left: 20px;
+      width: 200px;
+      text-align: center;
+      z-index: 3;
     }
+    
     .social-links a, .social-links span {
-      display: block; /* 垂直排列 */
-      margin: 15px 0; /* 链接间距 */
-      color: #87CEEB; /* 浅天蓝色，与 index.html 一致 */
+      display: block;
+      margin: 15px 0;
+      color: #87CEEB;
       text-decoration: none;
-      font-size: 16px; /* 字体大小 */
-      transition: color 0.3s ease; /* 平滑颜色过渡 */
-      cursor: pointer; /* 鼠标悬停时显示手型 */
+      font-size: 16px;
+      transition: color 0.3s ease;
+      cursor: pointer;
     }
+    
     .social-links a:hover, .social-links span:hover {
-      color: #B0E0E6; /* 悬停时稍亮，与 index.html 一致 */
+      color: #B0E0E6;
       text-decoration: underline;
     }
+    
     /* 内容容器 */
     .content-wrapper {
-      background-color: rgba(0, 0, 0, 0.9); /* 文字背景为黑色，与 index.html 一致 */
+      background-color: rgba(0, 0, 0, 0.9);
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* 阴影与 index.html 一致 */
-      position: relative; /* 确保内容在贴纸下方 */
-      overflow: hidden; /* 防止内容溢出 */
-      z-index: 2; /* 在贴纸下方 */
-      padding-left: 240px; /* 留出左侧贴纸和链接空间，与 index.html 一致 */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      padding-left: 240px;
     }
+    
     /* 标题与贴纸对齐 */
     h1 {
       margin-top: 0;
       line-height: 1.2;
-      color: #fff; /* 标题颜色为白色，与 index.html 一致 */
+      color: #fff;
     }
+    
     /* 导航栏样式 */
     nav {
       margin: 20px 0;
     }
+    
     nav a {
       margin-right: 20px;
       text-decoration: none;
-      color: #87CEEB; /* 导航链接为浅天蓝色，与 index.html 一致 */
+      color: #87CEEB;
     }
+    
     nav a:hover {
       text-decoration: underline;
-      color: #B0E0E6; /* 悬停时稍亮，与 index.html 一致 */
+      color: #B0E0E6;
     }
+    
     /* 视频样式 */
     .cat-video {
       display: flex;
@@ -95,27 +104,104 @@
       margin-left: 10px;
       margin-right: 10px;
     }
+    
     .cat-video-item {
-      text-align: center; /* 文字居中 */
+      text-align: center;
     }
+    
     .cat-video-item p {
-      margin: 0 0 5px 0; /* 文字与视频间距 */
-      font-size: 14px; /* 字体大小 */
-      color: #fff; /* 文字颜色为白色 */
+      margin: 0 0 5px 0;
+      font-size: 14px;
+      color: #fff;
     }
+    
     li {
       margin-bottom: 40px;
     }
+    
     /* 列表项内的文字颜色 */
     .content-wrapper ul {
-      list-style-type: disc; /* 与 index.html 一致 */
-      padding-left: 20px; /* 与 index.html 一致 */
-      margin: 0; /* 与 index.html 一致 */
+      list-style-type: disc;
+      padding-left: 20px;
+      margin: 0;
+    }
+    
+    /* 响应式设计媒体查询 */
+    @media (max-width: 1024px) {
+      .content-wrapper {
+        padding-left: 20px;
+      }
+      
+      .sticker {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0 auto 20px auto;
+      }
+      
+      .social-links {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      
+      .social-links a, .social-links span {
+        display: inline-block;
+        margin: 5px 10px;
+      }
+      
+      .cat-video {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .cat-video-item iframe {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        aspect-ratio: 16/9;
+      }
+    }
+    
+    /* 手机屏幕的特殊处理 */
+    @media (max-width: 600px) {
+      body {
+        margin: 20px auto;
+      }
+      
+      .sticker {
+        width: 150px;
+        height: 150px;
+      }
+      
+      h1 {
+        font-size: 24px;
+        text-align: center;
+      }
+      
+      nav {
+        text-align: center;
+      }
+      
+      nav a {
+        display: inline-block;
+        margin: 5px 10px;
+      }
+      
+      .content-wrapper {
+        padding: 15px;
+      }
+      
+      .cat-video-item {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="sticker"></div> <!-- 贴纸元素，左侧 -->
+  <div class="sticker"></div>
   <div class="social-links">
     <a href="mailto:cx119@ic.ac.uk">Email</a>
     <a href="https://www.linkedin.com/in/xiaoshuai-chen-6b7007183/" target="_blank">LinkedIn</a>
