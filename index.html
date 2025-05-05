@@ -6,227 +6,184 @@
   <title>Xiaoshuai Chen - About Me</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* 整体布局 */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px auto 20px auto;
-      max-width: 1100px;
-      padding: 0 20px;
-      color: #fff;
-      position: relative;
-      background-color: #1A2525;
+    /* ===== 基本布局 / 颜色 ===== */
+    body{
+      font-family:Arial, sans-serif;
+      margin:40px auto 20px auto;
+      max-width:1100px;
+      padding:0 20px;
+      color:#fff;
+      background:#1A2525;
+      position:relative;
     }
-    /* 贴纸样式（左侧） */
-    .sticker {
-      position: absolute;
-      top: -20px;
-      left: 20px;
-      width: 200px;
-      height: 200px;
-      background-image: url('images/profile.jpeg');
-      background-size: cover;
-      background-position: center;
-      border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      z-index: 3;
-      -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-      mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+
+    /* ===== 左侧圆形贴纸头像 ===== */
+    .sticker{
+      position:absolute;top:-20px;left:20px;
+      width:200px;height:200px;
+      background:url('images/profile.jpeg') center/cover no-repeat;
+      border-radius:50%;
+      box-shadow:0 4px 12px rgba(0,0,0,.3);
+      -webkit-mask-image:linear-gradient(to bottom, black 60%, transparent 100%);
+              mask-image:linear-gradient(to bottom, black 60%, transparent 100%);
+      z-index:3;
     }
-    /* 社交链接容器 */
-    .social-links {
-      position: absolute;
-      top: 200px;
-      left: 20px;
-      width: 200px;
-      text-align: center;
-      z-index: 3;
+
+    /* ===== 社交链接列表 ===== */
+    .social-links{
+      position:absolute;top:200px;left:20px;width:200px;
+      text-align:center;z-index:3;
     }
-    .social-links a, .social-links span {
-      display: block;
-      margin: 15px 0;
-      color: #87CEEB;
-      text-decoration: none;
-      font-size: 16px;
-      transition: color 0.3s ease;
-      cursor: pointer;
+    .social-links a,.social-links span{
+      display:block;margin:15px 0;color:#87CEEB;
+      text-decoration:none;font-size:16px;transition:.3s;color;
+      cursor:pointer;
     }
-    .social-links a:hover, .social-links span:hover {
-      color: #B0E0E6;
-      text-decoration: underline;
+    .social-links a:hover,.social-links span:hover{
+      color:#B0E0E6;text-decoration:underline;
     }
-    /* 右侧中间照片 */
-    .main-photo {
-      float: right;
-      margin: 100px 20px 20px 20px;
-      width: 250px;
-      height: 300px;
-      background-image: url('images/main.jpeg');
-      background-size: cover;
-      background-position: center;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      z-index: 3;
+
+    /* ===== 右侧主照片 ===== */
+    .main-photo{
+      float:right;margin:100px 20px 20px 20px;
+      width:250px;height:300px;
+      background:url('images/main.jpeg') center/cover no-repeat;
+      border-radius:10px;
+      box-shadow:0 4px 12px rgba(0,0,0,.3);
+      z-index:3;
     }
-    /* 内容容器 */
-    .content-wrapper {
-      background-color: rgba(0, 0, 0, 0.9);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      position: relative;
-      overflow: hidden;
-      z-index: 2;
-      padding-left: 240px; /* 留出左侧贴纸和链接空间 */
+
+    /* ===== 主内容区域 ===== */
+    .content-wrapper{
+      background:rgba(0,0,0,.9);
+      padding:20px 20px 20px 240px;
+      border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.3);
+      position:relative;overflow:hidden;z-index:2;
     }
-    /* 标题与贴纸对齐 */
-    h1 {
-      margin-top: 0;
-      line-height: 1.2;
-      color: #fff;
+
+    /* ===== 标题 / 导航 ===== */
+    h1{margin-top:0;line-height:1.2;color:#fff;}
+    nav{margin:20px 0;}
+    nav a{margin-right:20px;color:#87CEEB;text-decoration:none;}
+    nav a:hover{text-decoration:underline;}
+
+    /* ===== 折叠文本按钮 ===== */
+    .more-button{cursor:pointer;color:#87CEEB;text-decoration:underline;margin-left:5px;}
+    .collapsible-content{display:none;}
+    .collapsible-content.show{display:block;}
+
+    /* ===== 列表基础 ===== */
+    section{margin-bottom:30px;}
+    ul{list-style:disc;padding-left:20px;margin:0;}
+    li{margin-bottom:8px;}
+
+    /* ===== 高亮样式：粗体+下划线 ===== */
+    .highlight{font-weight:bold;text-decoration:underline;color:#fff;}
+
+    /* ===== 响应式调整 ===== */
+    @media(max-width:1024px){
+      .content-wrapper{padding-left:20px;}
+      .sticker{position:relative;top:0;left:0;margin:0 auto 20px;}
+      .social-links{position:relative;top:0;left:0;width:100%;margin-bottom:30px;}
+      .social-links a,.social-links span{display:inline-block;margin:5px 10px;}
+      .main-photo{float:none;margin:20px auto;display:block;}
     }
-    /* 导航栏样式 */
-    nav {
-      margin: 20px 0;
-    }
-    nav a {
-      margin-right: 20px;
-      text-decoration: none;
-      color: #87CEEB;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    /* 折叠部分的样式 */
-    .collapsible-content {
-      display: none;
-    }
-    .collapsible-content.show {
-      display: block;
-    }
-    .more-button {
-      cursor: pointer;
-      color: #87CEEB;
-      text-decoration: underline;
-      margin-left: 5px;
-    }
-    /* 部分分隔样式 */
-    section {
-      margin-bottom: 30px;
-    }
-    /* 项目符号样式 */
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin: 0;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-    /* 高亮样式：加粗 + 下划线 */
-    .highlight {
-      font-weight: bold;
-      text-decoration: underline;
-      color: #fff;
-    }
-    /* 响应式设计 */
-    @media (max-width: 1024px) {
-      .content-wrapper { padding-left: 20px; }
-      .sticker { position: relative; top: 0; left: 0; margin: 0 auto 20px auto; }
-      .social-links { position: relative; top: 0; left: 0; width: 100%; margin-bottom: 30px; }
-      .social-links a, .social-links span { display: inline-block; margin: 5px 10px; }
-      .main-photo { float: none; margin: 20px auto; display: block; }
-    }
-    @media (max-width: 600px) {
-      body { margin: 20px auto; }
-      .sticker { width: 150px; height: 150px; }
-      .main-photo { width: 100%; max-width: 300px; height: auto; aspect-ratio: 5/6; }
-      nav { text-align: center; }
-      nav a { display: inline-block; margin: 5px 10px; }
-      h1 { font-size: 24px; text-align: center; }
-      .content-wrapper { padding: 15px; }
+    @media(max-width:600px){
+      body{margin:20px auto;}
+      .sticker{width:150px;height:150px;}
+      .main-photo{width:100%;max-width:300px;height:auto;aspect-ratio:5/6;}
+      nav{text-align:center;}
+      nav a{display:inline-block;margin:5px 10px;}
+      h1{font-size:24px;text-align:center;}
+      .content-wrapper{padding:15px;}
     }
   </style>
 </head>
 <body>
+  <!-- ===== 左侧头像 & 社交 ===== -->
   <div class="sticker"></div>
   <div class="social-links">
     <a href="mailto:cx119@ic.ac.uk">Email</a>
     <a href="https://www.linkedin.com/in/xiaoshuai-chen-6b7007183/" target="_blank">LinkedIn</a>
-    <a href="https://scholar.google.com/citations?user=lmr2zL4AAAAJ&hl=en" target="_blank">Google Scholar</a>
-    <span onclick="alert('My WeChat ID: cxs96cxs')">WeChat</span>
-    <a href="https://www.instagram.com/cxiaoshuai?igsh=MTJ6dW9peHdyMjM0cA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+    <a href="https://scholar.google.com/citations?user=lmr2zL4AAAAJ&hl=en" target="_blank">Google Scholar</a>
+    <span onclick="alert('My WeChat ID: cxs96cxs')">WeChat</span>
+    <a href="https://www.instagram.com/cxiaoshuai" target="_blank">Instagram</a>
   </div>
 
+  <!-- ===== 右侧主照片 + 内容 ===== -->
   <div class="content-wrapper">
     <div class="main-photo"></div>
-    <h1>Xiaoshuai Chen (陈晓帅)</h1>
+    <h1>Xiaoshuai Chen (陈晓帅)</h1>
+
+    <!-- 简易导航 -->
     <nav>
-      <a href="index.html">About Me</a>
+      <a href="index.html">About Me</a>
       <a href="publications.html">Publications</a>
       <a href="cat.html">Cat</a>
       <a href="cooking.html">Cooking</a>
     </nav>
 
-    <!-- About Me section -->
+    <!-- About Me -->
     <section>
-      <h2>About Me</h2>
+      <h2>About Me</h2>
       <ul>
-        <li>3rd‑year Ph.D. student in Robot Learning at <span class="highlight">Imperial College London</span>, affiliated with the <a href="https://www.imperial.ac.uk/robot-intelligence/people/" class="highlight" target="_blank">Robot Intelligence Lab</a> and <a href="https://www.imperial.ac.uk/reds-lab/people/" class="highlight" target="_blank">REDS Lab</a> in the Dyson School of Design Engineering.</li>
-        <li>Research focuses on scalable and generalizable robot learning systems.</li>
-        <li>Interests include learning from expert demonstrations, remote teleoperation, cross‑platform skill transfer, and multimodal intelligence integrating vision, tactile sensing, and language.</li>
-        <li>Passionate about advancing robotics through interdisciplinary collaboration—connect with me on <a href="https://www.linkedin.com/in/xiaoshuai-chen-6b7007183/" target="_blank">LinkedIn</a> to discuss my work or explore opportunities in robot learning and AI. <span id="toggleButton" class="more-button">More</span></li>
+        <li>3rd‑year Ph.D. student in Robot Learning at <span class="highlight">Imperial College London</span>, affiliated with the
+          <a href="https://www.imperial.ac.uk/robot-intelligence/people/" class="highlight" target="_blank">Robot Intelligence Lab</a> and
+          <a href="https://www.imperial.ac.uk/reds-lab/" class="highlight" target="_blank">REDS Lab</a> in the Dyson School of Design Engineering.</li>
+        <li>Research focuses on scalable and generalizable robot‑learning systems.</li>
+        <li>Interests include learning from expert demonstrations, remote teleoperation, cross‑platform skill transfer and multimodal intelligence integrating vision, tactile sensing &amp; language.</li>
+        <li>Passionate about advancing robotics through interdisciplinary collaboration—connect with me on
+          <a href="https://www.linkedin.com/in/xiaoshuai-chen-6b7007183/" target="_blank">LinkedIn</a>.
+          <span id="toggleButton" class="more-button">More</span>
+        </li>
       </ul>
       <div id="moreContent" class="collapsible-content">
-        <ul>
-          <li>I am also a funny guy!!!</li>
-        </ul>
+        <ul><li>I am also a funny guy!!!</li></ul>
       </div>
     </section>
 
-    <!-- Education section -->
+    <!-- Education -->
     <section>
       <h2>Education</h2>
       <ul>
-        <li>MRes in Medical Robotics and Image‑Guided Intervention (Distinction) from <span class="highlight">Imperial College London</span> (2019–2020).</li>
-        <li>Dual BEng degrees in Mechatronic Engineering from <span class="highlight">Chongqing University</span> (2015–2019) and Mechanical Engineering from <span class="highlight">Queen's University Belfast</span> (2017–2019).</li>
-        <li>Expertise spans robotics, cutting‑edge foundation model algorithms, and mechanical design, supported by skills in UR5, Franka Emika, Baxter, Kinova, and Master‑slave Robot Systems.</li>
+        <li>MRes in Medical Robotics &amp; Image‑Guided Intervention (Distinction) from <span class="highlight">Imperial College London</span> (2019–2020).</li>
+        <li>Dual BEng degrees in Mechatronic Engineering from
+          <a href="https://english.cqu.edu.cn/" class="highlight" target="_blank">Chongqing University</a> (2015–2019) and Mechanical Engineering from
+          <a href="https://www.qub.ac.uk/" class="highlight" target="_blank">Queen's University Belfast</a> (2017–2019).</li>
+        <li>Expertise spans robotics, foundation‑model algorithms and mechanical design; skilled with UR5, Franka Emika, Baxter, Kinova and master‑slave robot systems.</li>
       </ul>
     </section>
 
-    <!-- Working Experience section -->
+    <!-- Working Experience -->
     <section>
-      <h2>Working Experience</h2>
+      <h2>Working Experience</h2>
       <ul>
-        <li>Currently doing internship in <span class="highlight">Precision Robotics</span> for surgical robot applications (2025).</li>
-        <li>AI Project Manager at <span class="highlight">Hithink RoyalFlush</span> (2021).</li>
-        <li>Research internship at <span class="highlight">Hamlyn Centre</span> (2020).</li>
-        <li>Research internship at <span class="highlight">Tsinghua University</span> (2018), where I won the <span class="highlight">Siemens</span> JCAR Intelligent Robot Grasping Competition (1st place, 2018).</li>
+        <li>Intern, <a href="https://www.prhk.ltd/" class="highlight" target="_blank">Precision Robotics</a> (2025) – surgical‑robot applications.</li>
+        <li>AI Project Manager at <a href="https://www.hithink.com/about.html" class="highlight" target="_blank">Hithink RoyalFlush</a> (2021).</li>
+        <li>Research intern at <a href="https://www.imperial.ac.uk/hamlyn-centre/" class="highlight" target="_blank">Hamlyn Centre</a> (2020).</li>
+        <li>Research intern at <a href="https://www.tsinghua.edu.cn/en/" class="highlight" target="_blank">Tsinghua University</a> (2018); 1st place in the
+            <span class="highlight">Siemens</span> JCAR Intelligent Robot Grasping Competition (2018).</li>
       </ul>
     </section>
 
-    <!-- Research & Achievements section -->
+    <!-- Research & Achievements -->
     <section>
-      <h2>Research & Achievements</h2>
+      <h2>Research &amp; Achievements</h2>
       <ul>
-        <li>Five first‑ or co‑authored publications in IEEE RAL and OJEMB, including "A Backbone for Long‑Horizon Robot Task Understanding" (2025).</li>
-        <li>ICRA 2023 Special Award in Robotic Cloth Manipulation Competition.</li>
-        <li>Check out my full list of publications on <a href="https://scholar.google.com/citations?user=lmr2zL4AAAAJ&hl=en" target="_blank">Google Scholar</a>.</li>
+        <li>Five first‑/co‑authored papers in IEEE RAL &amp; OJEMB, including “A Backbone for Long‑Horizon Robot Task Understanding” (2025).</li>
+        <li>ICRA 2023 Special Award – Robotic Cloth Manipulation Competition.</li>
+        <li>Full publication list on <a href="https://scholar.google.com/citations?user=lmr2zL4AAAAJ&hl=en" target="_blank">Google Scholar</a>.</li>
       </ul>
     </section>
   </div>
 
-  <!-- 折叠文本展开/收起脚本 -->
+  <!-- 折叠/展开脚本 -->
   <script>
     const toggleButton = document.getElementById('toggleButton');
-    const moreContent = document.getElementById('moreContent');
+    const moreContent  = document.getElementById('moreContent');
     toggleButton.addEventListener('click', () => {
-      if (moreContent.classList.contains('show')) {
-        moreContent.classList.remove('show');
-        toggleButton.textContent = 'More';
-      } else {
-        moreContent.classList.add('show');
-        toggleButton.textContent = 'Less';
-      }
+      moreContent.classList.toggle('show');
+      toggleButton.textContent = moreContent.classList.contains('show') ? 'Less' : 'More';
     });
   </script>
 </body>
